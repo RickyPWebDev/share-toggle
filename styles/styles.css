@@ -1,0 +1,214 @@
+/* Importing fonts */
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    background-color: hsl(210, 46%, 95%);
+    color: hsl(214, 17%, 51%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 1rem;
+    margin: 0;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    max-width: 730px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .card-image {
+    width: 100%;
+    max-width: 285px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .card-text {
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .avatar {
+    width: 40px;
+    border-radius: 50%;
+  }
+  
+  .user-name {
+    font-weight: 700;
+    color: hsl(217, 19%, 35%);
+    margin: 0;
+  }
+  
+  .post-date {
+    margin: 0;
+    font-size: 12px;
+    color: hsl(212, 23%, 69%);
+  }
+  
+  .share img {
+    cursor: pointer;
+    background-color: hsl(210, 46%, 95%);
+    padding: 8px;
+    border-radius: 50%;
+  }
+  
+ /* Toggle visibility */
+
+ 
+  /* Wrapper for positioning */
+  .share-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Share icon styling */
+  .share-btn {
+    background-color: hsl(210, 46%, 95%);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Popup */
+  .share-popup {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 130%;
+    right: 0;
+    transform: translateX(25%);
+    font-size: 13px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    z-index: 10;
+    transition: opacity 0.3s ease;
+    overflow:visible;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  .share-popup span {
+    color: hsl(210, 46%, 95%);
+    font-weight: 500;
+  }
+  
+  .share-popup img {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+  
+  /* Triangle tip */
+  .triangle {
+    position: absolute;
+    top: 100%;
+    right: 28px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid hsl(217, 19%, 35%);
+  }
+  
+  @media (max-width: 720px) {
+    .card {
+      flex-direction: column;
+    }
+  
+    .card-image {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .card-content {
+      padding: 1.5rem;
+    }
+  
+    .card-footer {
+      position: relative;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+  
+    /* Share popup becomes footer bar */
+    .share-popup {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: 0;
+      justify-content: space-around;
+      text-transform: none;
+      padding: 1rem;
+      transform: none;
+      background-color: hsl(217, 19%, 35%);
+    }
+  
+    .share-popup span {
+      display: none;
+    }
+  
+    .triangle {
+      display: none;
+    }
+  
+    .user-info {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .share-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+  
+    .share-btn {
+      background-color: hsl(214, 17%, 51%);
+    }
+  
+    .share-btn img {
+      filter: brightness(0) invert(1); /* Makes icon white */
+    }
+  }
